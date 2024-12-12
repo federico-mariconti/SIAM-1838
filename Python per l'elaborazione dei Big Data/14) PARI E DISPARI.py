@@ -33,8 +33,34 @@ for el in range(quantita):
         print('il numero non è pari')
         listanumdispari.append(numero)
 
-print('numeri pari',listanumpari, end=' ')
-print('\n', 'numeri dispari', listanumdispari, end=' ')
+print('numeri pari')
+for el in listanumpari:
+    print(el)
 
-print('numeri pari',listanumpari(-1), end=' ')
-print('\n', 'numeri dispari', listanumdispari(-1), end=' ')
+print('numeri dispari')
+for el in listanumdispari:
+    print(el)
+
+#ordinamento lista al contrario metodo 1 -1-i
+print('metodo 1')
+for i in range(len(listanumpari)):
+    indice=len(listanumpari)-1-i;
+    print(listanumpari[indice], end=' ')
+
+#ordinamento lista al contrario metodo 2 indice
+print('\nmetodo 2')
+for i in range(len(listanumpari), 0, -1):
+    indice = i-1;
+    print(listanumpari[indice], end=" ")
+
+#ordinamento lista al contrario metodo 3 reversed
+print('\nmetodo 3')
+for i in reversed(listanumpari):
+    print(i, end=" ")
+    
+#ordinamento lista al contrario metodo 3 slicing
+print('\nmetodo 4')
+for i in listanumpari[::-1]:
+    print(i, end=" ")
+
+
